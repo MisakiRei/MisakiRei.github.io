@@ -16,17 +16,20 @@
   <meta name="author" content="Yuki H">
   <meta name="keywords" content="">
   
-    <meta name="description" content="水母喵喵的个人博客">
+    <meta name="description" content="瞎写什么：  干扰检测指标融合方法研究，参考《网络安全》论文（告警序列聚类）  继续查阅论文计算CCD值，利用卫星的仰角信息进行作图。  等接收机前端到货后调试设备  外接OCXO参考时钟进行采样  双频抗干扰代码调整，分析如何补偿掉频率合成器的误差。  调研论文u-blox型号，询问翁老师能否购买相应的u-blox版本用于AGC计数  &#x3D;&#x3D;修改L1接收机，最好能L1辅助L5捕">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Recent Work">
 <meta property="og:url" content="http://example.com/2023/03/18/Recent-Work/index.html">
 <meta property="og:site_name" content="水母喵喵">
-<meta property="og:description" content="水母喵喵的个人博客">
+<meta property="og:description" content="瞎写什么：  干扰检测指标融合方法研究，参考《网络安全》论文（告警序列聚类）  继续查阅论文计算CCD值，利用卫星的仰角信息进行作图。  等接收机前端到货后调试设备  外接OCXO参考时钟进行采样  双频抗干扰代码调整，分析如何补偿掉频率合成器的误差。  调研论文u-blox型号，询问翁老师能否购买相应的u-blox版本用于AGC计数  &#x3D;&#x3D;修改L1接收机，最好能L1辅助L5捕">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:\Users\%E9%BB%84%E6%98%A0%E6%9D%B0\AppData\Roaming\Typora\typora-user-images\image-20230302201611490.png">
+<meta property="og:image" content="c:\Users\%E9%BB%84%E6%98%A0%E6%9D%B0\AppData\Roaming\Typora\typora-user-images\image-20230301170844884.png">
 <meta property="article:published_time" content="2023-03-18T15:01:58.000Z">
-<meta property="article:modified_time" content="2023-03-18T15:01:58.233Z">
+<meta property="article:modified_time" content="2023-03-18T15:11:24.603Z">
 <meta property="article:author" content="Yuki H">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="c:\Users\%E9%BB%84%E6%98%A0%E6%9D%B0\AppData\Roaming\Typora\typora-user-images\image-20230302201611490.png">
   
   
   
@@ -219,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          1.2k 字
         
       </span>
     
@@ -230,7 +233,7 @@
         
         
         
-          1 分钟
+          11 分钟
         
       </span>
     
@@ -273,7 +276,36 @@
             
               <div class="markdown-body">
                 
-                
+                <h2 id="瞎写什么："><a href="#瞎写什么：" class="headerlink" title="瞎写什么："></a>瞎写什么：</h2><ul>
+<li><input disabled="" type="checkbox"> 干扰检测指标融合方法研究，参考《网络安全》论文（告警序列聚类）</li>
+<li><input disabled="" type="checkbox"> <del>继续查阅论文计算CCD值，利用卫星的仰角信息进行作图</del>。</li>
+<li><input checked="" disabled="" type="checkbox"> 等接收机前端到货后调试设备</li>
+<li><input disabled="" type="checkbox"> 外接OCXO参考时钟进行采样</li>
+<li><input disabled="" type="checkbox"> 双频抗干扰代码调整，分析如何补偿掉频率合成器的误差。</li>
+<li><input checked="" disabled="" type="checkbox"> <del>调研论文u-blox型号，询问翁老师能否购买相应的u-blox版本用于AGC计数</del></li>
+<li><input disabled="" type="checkbox"> &#x3D;&#x3D;修改L1接收机，最好能L1辅助L5捕获&#x3D;&#x3D;</li>
+<li><input disabled="" type="checkbox"> &#x3D;&#x3D;给matlab接收机1.2增加IQ数据处理功能&#x3D;&#x3D;</li>
+<li><input checked="" disabled="" type="checkbox"> &#x3D;&#x3D;时域统计方法干扰检测，拟合优度卡方检验：&#x3D;&#x3D;</li>
+</ul>
+<p>$$<br>D&#x3D;\sum_{i&#x3D;1}^K \frac{exp_{i}-obs_{i}}{exp_i}\sim{\chi^{2}(k-1)}<br>$$</p>
+<p>其中，$exp_{i}&#x3D;np_{i}$：理论频数；$obs_{i}$：实际频数</p>
+<h3 id="卡方检验"><a href="#卡方检验" class="headerlink" title="卡方检验"></a>卡方检验</h3><p>matlab函数：chi2gof<br>对时域进行检验（中频、ip(x)、qp(x)）<br>对变换域进行检验（中频、ip(x)、qp(x)）</p>
+<ul>
+<li><input disabled="" type="checkbox"> $C&#x2F;N_0$方差分析</li>
+<li><input checked="" disabled="" type="checkbox"> 给目前所有的干扰数据make a list</li>
+<li><input checked="" disabled="" type="checkbox"> CMCD和CCDT的区别，单位不一样，已试验过</li>
+<li><input disabled="" type="checkbox"> S-curve 利用3$\sigma$准则，确定检测阈值&#x3D;&#x3D;（3不了）&#x3D;&#x3D;</li>
+</ul>
+<h2 id="光速QA："><a href="#光速QA：" class="headerlink" title="光速QA："></a>光速QA：</h2><p>Q1：SDRLIB + GNSS SDK R2 PRO，L1CA采样率只能9.6IQ，19.2或者I都无法捕获<br>A1：采样率和量化方案需要在cpp文件<strong>gdk_bsp.cpp</strong>里修改。似乎除了L1CA其他的L1频点的信号都不行(B1 G1 这种)</p>
+<p>Q2：NRC的u-blox开发套件型号？<br>A2：EVK-M8U，对应的数据手册里似乎没有AGC COUNT的内容</p>
+<p>Q3：论文里的ublox型号是U-BLOX ublox LEA-6T<br>A3：似乎是一个板卡<img src="C:\Users\黄映杰\AppData\Roaming\Typora\typora-user-images\image-20230302201611490.png" srcset="/img/loading.gif" lazyload alt="image-20230302201611490" style="zoom: 25%;" /></p>
+<p>Q4：增加采样率后，重新生成解决方案，运行一段时间后自动退出程序了？<br>A4：&#x3D;&#x3D;待解决&#x3D;&#x3D;</p>
+<h2 id="开题报告的检测方案："><a href="#开题报告的检测方案：" class="headerlink" title="开题报告的检测方案："></a>开题报告的检测方案：</h2><p><img src="C:\Users\黄映杰\AppData\Roaming\Typora\typora-user-images\image-20230301170844884.png" srcset="/img/loading.gif" lazyload alt="image-20230301170844884"></p>
+<h2 id="修改L1接收机，最好能L1辅助L5捕获"><a href="#修改L1接收机，最好能L1辅助L5捕获" class="headerlink" title="修改L1接收机，最好能L1辅助L5捕获"></a>修改L1接收机，最好能L1辅助L5捕获</h2><p>将L1接收机改为L5的接收机，先验证接收机的正确性，同时两个跑SDRLIB（一个RTCM输出L1、一个输出L5）之后再考虑怎么把两个接收机合并。</p>
+<p><strong>目前播发L5C信号的GPS卫星：1&#x2F;3&#x2F;4&#x2F;6&#x2F;8&#x2F;9&#x2F;10&#x2F;11&#x2F;14&#x2F;18&#x2F;23&#x2F;24&#x2F;25&#x2F;26&#x2F;27&#x2F;30&#x2F;32</strong></p>
+<p>L1辅助L5进行捕获：如果捕获到L1信号的PRN号是上述卫星，则可以用于L5捕获，载波可以换算，码相位能否换算？</p>
+<h2 id="给matlab接收机1-3增加IQ数据处理功能"><a href="#给matlab接收机1-3增加IQ数据处理功能" class="headerlink" title="给matlab接收机1.3增加IQ数据处理功能"></a>给matlab接收机1.3增加IQ数据处理功能</h2><p>捕获没问题，<del>跟踪出现问题不能跟上</del>。可以跟上了，但是捕获结果有些问题。<del>38.4MHz采样率的问题似乎是</del>。</p>
+
                 
               </div>
             
